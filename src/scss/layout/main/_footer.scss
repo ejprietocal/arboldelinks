@@ -1,0 +1,19 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.container-footer{
+    background-image: url('/build/img/fondoMariaFooter.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat:repeat-x;
+    @include m.tablet{
+        background-size: contain;
+    }
+    height: 10rem;
+
+    p{
+        margin-top: 3rem;
+        color: v.$text-black-color;
+        width: fit-content;
+    }
+}

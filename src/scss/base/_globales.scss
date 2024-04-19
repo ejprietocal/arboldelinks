@@ -1,0 +1,30 @@
+@use 'base/variables' as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+body{
+    background-image: url('/build/img/fondoMaria3.png');
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    }
+*, *:before, *:after {
+    color: v.$text-color ;
+    box-sizing: inherit;
+    font-family: v.$font;
+}
+
+i{
+    pointer-events: none;
+}
+picture{
+    display: block;
+    position: relative;
+}
+a{
+    text-decoration: none !important;
+    color: inherit !important;
+}

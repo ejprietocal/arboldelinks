@@ -1,0 +1,34 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+#section1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .card{
+        height: 10rem;
+        width: 12rem;
+        background-color: v.$bg-color-blanco;
+        border-radius: 1rem;
+        rotate: 7deg;
+        overflow: hidden;
+        .card-header{
+            color: v.$text-color;
+            background-color: v.$rosado;
+        }
+        .card-body{
+            color: v.$text-black-color;
+            p{
+                
+                color: v.$text-black-color;
+            }
+        }
+        .card-footer{
+            background-color: v.$rosado;
+            color: v.$text-color;
+        }
+    }
+}

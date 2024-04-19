@@ -1,0 +1,126 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+#section2{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    margin-top: 1rem;
+    @include m.tablet{
+        margin-top: 3rem;
+    }
+    @include m.tablet{
+        flex-direction: row;
+    }
+
+    .container{
+        height: fit-content;
+        position: relative;
+        padding: 1rem;
+        @include m.tablet{
+            padding: 3rem;
+        }
+    }
+    #enlaces{
+        margin-top: calc((v.$altura-descripcion / 2) + 1rem);
+        margin-bottom: 5rem;
+    }
+    .link{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        font-weight: v.$semibold;
+        .col-5{
+            padding: 1rem;
+            transition: v.$transition-4;
+            rotate: 0deg;
+            &:hover{
+                rotate: -2deg;
+                cursor: pointer;
+            }
+            @include m.tablet{
+                margin: 1rem;
+                // padding: 2rem;
+            }
+            a{
+                padding: 1rem 3rem;
+                @include m.tablet{
+                    padding: 1rem 6rem;
+                }
+            }
+            box-shadow: v.$shadow;
+            background: rgb(204,51,102);
+            background: radial-gradient(circle, rgba(204,51,102,1) 50%, rgba(255,255,255,1) 100%);            border-radius: 1rem;
+        }
+    }
+
+    .descripcion{
+        position: absolute;
+        bottom: calc(-1 * (v.$altura-descripcion - 3rem));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-image: url('/build/img/fondoDescripcion.png');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: v.$altura-descripcion;
+        border-radius: 1rem;
+        z-index: 2;
+        h1{
+            color: v.$text-black-color;
+            font-size: 2.5rem;
+            font-weight: v.$bold;
+        }
+
+    }
+    .icon{
+        width: 3rem;
+        z-index: 2;
+        @include m.tablet{
+            width: 5rem;
+        }
+    }
+    .icon1{
+        position: absolute;
+        left: 3rem;
+        bottom: -3rem;
+        @include m.tablet{
+            left: 5rem;
+        }
+    }
+    .icon2{
+        position: absolute;
+        bottom: -3rem;
+        right: 3rem;
+        @include m.tablet{
+            right: 5rem;
+        }
+    }
+    
+    .icon3{
+        position: absolute;
+        bottom: -3rem;
+        left: 6rem;
+        @include m.tablet{
+            
+            left: 10rem;
+        }
+    }
+    .icon4{
+        position: absolute;
+        bottom: -3rem;
+        right: 5rem;
+        @include m.tablet{
+            
+            right: 10rem;
+        }
+    }
+    
+}
